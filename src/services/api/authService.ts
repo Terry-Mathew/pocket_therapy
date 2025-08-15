@@ -268,6 +268,7 @@ class AuthService {
       const user: User = {
         id: supabaseUser.id,
         email: supabaseUser.email,
+        onboarding_completed: false,
         isGuest: false,
         createdAt: supabaseUser.created_at,
         updatedAt: new Date().toISOString(),

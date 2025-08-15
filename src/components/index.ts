@@ -13,6 +13,11 @@ export { default as Modal, ConfirmModal } from './ui/Modal';
 export { default as LoadingSpinner, FullScreenLoader, InlineLoader, ExerciseLoader, MoodSyncLoader, AuthLoader } from './ui/LoadingSpinner';
 // export { default as EmptyState } from './ui/EmptyState';
 
+// Authentication Components
+export { default as AuthGuard } from './auth/AuthGuard';
+// export { default as LoginForm } from './auth/LoginForm';
+// export { default as SignupForm } from './auth/SignupForm';
+
 // Form Components
 // export { default as FormInput } from './forms/FormInput';
 // export { default as FormButton } from './forms/FormButton';

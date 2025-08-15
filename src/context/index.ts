@@ -6,7 +6,7 @@
  */
 
 // Authentication Context
-// export { AuthProvider, useAuthContext } from './AuthContext';
+export { AuthProvider, useAuth } from './AuthContext';
 
 // User Preferences Context
 // export { PreferencesProvider, usePreferencesContext } from './PreferencesContext';

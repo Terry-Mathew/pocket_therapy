@@ -9,12 +9,26 @@
 // USER & AUTHENTICATION TYPES
 // ============================================================================
 
+export type AuthState = 'loading' | 'authenticated' | 'guest' | 'unauthenticated';
+
+export interface GuestUser {
+  id: string;
+  display_name?: string;
+  timezone?: string;
+  onboarding_completed: boolean;
+  isGuest: true;
+  createdAt: string;
+  profile?: UserProfile;
+}
+
 export interface User {
   id: string;
   email?: string;
   googleId?: string;
-  displayName?: string;
-  avatarUrl?: string;
+  display_name?: string;
+  avatar_url?: string;
+  timezone?: string;
+  onboarding_completed: boolean;
   isGuest: boolean;
   createdAt: string;
   updatedAt: string;
@@ -128,23 +142,9 @@ export interface GoogleAuthResponse {
   error?: string;
 }
 
-export interface GuestUser {
-  id: string;
-  isGuest: true;
-  createdAt: string;
-  localData: {
-    moodLogs: MoodLog[];
-    exerciseSessions: ExerciseSession[];
-    preferences: UserPreferences;
-  };
-}
+// GuestUser interface is defined above
 
-export interface AuthState {
-  user: User | GuestUser | null;
-  isLoading: boolean;
-  isAuthenticated: boolean;
-  isGuest: boolean;
-}
+// AuthState type is defined above as a union type
 
 // ============================================================================
 // NAVIGATION TYPES

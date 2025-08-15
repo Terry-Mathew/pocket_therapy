@@ -6,8 +6,8 @@
  */
 
 // Authentication Screens
-// export { default as LoginScreen } from './auth/LoginScreen';
-// export { default as SignupScreen } from './auth/SignupScreen';
+export { default as AuthScreen } from './auth/AuthScreen';
+export { default as ProfileScreen } from './auth/ProfileScreen';
 // export { default as OTPScreen } from './auth/OTPScreen';
 
 // Onboarding Screens
