@@ -263,7 +263,7 @@ export interface BaseComponentProps {
 export interface ButtonProps extends BaseComponentProps {
   title: string;
   onPress: () => void;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'crisis';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   loading?: boolean;

@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import DependencyTest from './DependencyTest';
+import DesignSystemDemo from './src/screens/DesignSystemDemo';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <DependencyTest />
+      <DesignSystemDemo />
       <StatusBar style='auto' />
     </View>
   );

@@ -6,11 +6,11 @@
  */
 
 // UI Components (Basic building blocks)
-// export { default as Button } from './ui/Button';
-// export { default as Card } from './ui/Card';
-// export { default as Input } from './ui/Input';
-// export { default as Modal } from './ui/Modal';
-// export { default as LoadingSpinner } from './ui/LoadingSpinner';
+export { default as Button, PrimaryButton, SecondaryButton, OutlineButton, GhostButton, CrisisButton } from './ui/Button';
+export { default as Card, ExerciseCard, MoodCard, InsightCard } from './ui/Card';
+export { default as Input, MoodNoteInput, SearchInput, EmailInput, OTPInput } from './ui/Input';
+export { default as Modal, ConfirmModal } from './ui/Modal';
+export { default as LoadingSpinner, FullScreenLoader, InlineLoader, ExerciseLoader, MoodSyncLoader, AuthLoader } from './ui/LoadingSpinner';
 // export { default as EmptyState } from './ui/EmptyState';
 
 // Form Components
