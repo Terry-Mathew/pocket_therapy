@@ -6,8 +6,8 @@
  */
 
 // API Services
-// export { default as supabaseClient } from './api/supabaseClient';
-// export { default as authService } from './api/authService';
+export { default as supabaseClient, supabase } from './api/supabaseClient';
+export { default as authService } from './api/authService';
 // export { default as moodService } from './api/moodService';
 // export { default as exerciseService } from './api/exerciseService';
 // export { default as userService } from './api/userService';

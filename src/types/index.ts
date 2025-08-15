@@ -12,9 +12,13 @@
 export interface User {
   id: string;
   email?: string;
+  googleId?: string;
+  displayName?: string;
+  avatarUrl?: string;
   isGuest: boolean;
   createdAt: string;
   updatedAt: string;
+  lastActiveAt?: string;
   profile?: UserProfile;
 }
 
@@ -115,6 +119,34 @@ export interface ExerciseSession {
 }
 
 // ============================================================================
+// AUTHENTICATION TYPES
+// ============================================================================
+
+export interface GoogleAuthResponse {
+  success: boolean;
+  user?: User;
+  error?: string;
+}
+
+export interface GuestUser {
+  id: string;
+  isGuest: true;
+  createdAt: string;
+  localData: {
+    moodLogs: MoodLog[];
+    exerciseSessions: ExerciseSession[];
+    preferences: UserPreferences;
+  };
+}
+
+export interface AuthState {
+  user: User | GuestUser | null;
+  isLoading: boolean;
+  isAuthenticated: boolean;
+  isGuest: boolean;
+}
+
+// ============================================================================
 // NAVIGATION TYPES
 // ============================================================================
 
@@ -126,9 +158,9 @@ export type RootStackParamList = {
 };
 
 export type AuthStackParamList = {
-  Login: undefined;
-  Signup: undefined;
-  OTP: { email: string };
+  Welcome: undefined;
+  GoogleAuth: undefined;
+  GuestMode: undefined;
 };
 
 export type OnboardingStackParamList = {
