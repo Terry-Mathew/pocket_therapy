@@ -14,6 +14,10 @@
     "type-check": "tsc --noEmit",
     "dev:check": "npm run type-check && npm run lint && npm run format:check",
     "dev:fix": "npm run type-check && npm run lint:fix && npm run format",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:install": "playwright install",
     "clean": "expo r -c",
     "reset": "expo r -c && npm install"
   },
@@ -34,13 +38,14 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.5",
-    "react-native-safe-area-context": "5.4.0",
+    "react-native-safe-area-context": "^5.4.0",
     "react-native-screens": "~4.11.1",
     "react-native-web": "^0.20.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@eslint/js": "^9.33.0",
+    "@playwright/test": "^1.54.2",
     "@types/react": "~19.0.10",
     "@types/react-native": "^0.72.8",
     "@typescript-eslint/eslint-plugin": "^8.39.1",
@@ -51,6 +56,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-native": "^5.0.0",
+    "playwright": "^1.54.2",
     "prettier": "^3.6.2",
     "typescript": "~5.8.3"
   },

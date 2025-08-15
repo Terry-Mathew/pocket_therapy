@@ -1,19 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthProvider } from '@context';
-import { AuthGuard } from '@components';
-import DesignSystemDemo from './src/screens/DesignSystemDemo';
+import RootNavigator from './src/navigation/RootNavigator';
 
 export default function App() {
   return (
-    <AuthProvider>
-      <View style={styles.container}>
-        <AuthGuard>
-          <DesignSystemDemo />
-        </AuthGuard>
-        <StatusBar style='auto' />
-      </View>
-    </AuthProvider>
+    <SafeAreaProvider>
+      <AuthProvider>
+        <View style={styles.container}>
+          <RootNavigator />
+          <StatusBar style='auto' />
+        </View>
+      </AuthProvider>
+    </SafeAreaProvider>
   );
 }
 

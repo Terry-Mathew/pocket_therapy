@@ -152,32 +152,37 @@ export interface GoogleAuthResponse {
 
 export type RootStackParamList = {
   Auth: undefined;
-  Onboarding: undefined;
   Main: undefined;
-  SOS: undefined;
-};
-
-export type AuthStackParamList = {
-  Welcome: undefined;
-  GoogleAuth: undefined;
-  GuestMode: undefined;
-};
-
-export type OnboardingStackParamList = {
-  Welcome: undefined;
-  MoodBaseline: undefined;
-  TriggerSelection: undefined;
-  Goals: undefined;
-  Preferences: undefined;
-  FirstSession: undefined;
+  Onboarding: undefined;
 };
 
 export type MainTabParamList = {
   Home: undefined;
   Exercises: undefined;
   Insights: undefined;
-  Settings: undefined;
+  Profile: undefined;
 };
+
+export type ExerciseStackParamList = {
+  ExerciseLibrary: undefined;
+  ExercisePlayer: { exerciseId: string };
+  ExerciseCompletion: { exerciseId: string; sessionId: string };
+};
+
+export type ProfileStackParamList = {
+  ProfileMain: undefined;
+  Settings: undefined;
+  Privacy: undefined;
+  CrisisResources: undefined;
+};
+
+export type SOSStackParamList = {
+  SOSBreathing: undefined;
+  SOSGrounding: undefined;
+  SOSResources: undefined;
+};
+
+// Navigation types are defined above - removing duplicates
 
 // ============================================================================
 // API RESPONSE TYPES

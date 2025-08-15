@@ -11,7 +11,7 @@ export { default as ProfileScreen } from './auth/ProfileScreen';
 // export { default as OTPScreen } from './auth/OTPScreen';
 
 // Onboarding Screens
-// export { default as WelcomeScreen } from './onboarding/WelcomeScreen';
+export { default as OnboardingScreen } from './OnboardingScreen';
 // export { default as MoodBaselineScreen } from './onboarding/MoodBaselineScreen';
 // export { default as TriggerSelectionScreen } from './onboarding/TriggerSelectionScreen';
 // export { default as GoalsScreen } from './onboarding/GoalsScreen';
@@ -19,7 +19,9 @@ export { default as ProfileScreen } from './auth/ProfileScreen';
 // export { default as FirstSessionScreen } from './onboarding/FirstSessionScreen';
 
 // Main App Screens
-// export { default as HomeScreen } from './home/HomeScreen';
+export { default as HomeScreen } from './HomeScreen';
+export { default as ExercisesScreen } from './ExercisesScreen';
+export { default as InsightsScreen } from './InsightsScreen';
 
 // Mood Tracking Screens
 // export { default as MoodCheckScreen } from './mood/MoodCheckScreen';
