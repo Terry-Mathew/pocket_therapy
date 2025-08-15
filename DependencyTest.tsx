@@ -8,13 +8,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
  * This will be removed once we implement the actual features
  */
 export default function DependencyTest() {
-  
   // Test Haptics (vibration feedback)
   const testHaptics = async () => {
     try {
       await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
       Alert.alert('Success', 'Haptics working! You should feel a vibration.');
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Haptics not available on this device');
     }
   };
@@ -24,23 +23,26 @@ export default function DependencyTest() {
     try {
       const testKey = 'pockettherapy_test';
       const testValue = 'Dependencies working!';
-      
+
       // Store data
       await AsyncStorage.setItem(testKey, testValue);
-      
+
       // Retrieve data
       const retrievedValue = await AsyncStorage.getItem(testKey);
-      
+
       if (retrievedValue === testValue) {
-        Alert.alert('Success', 'AsyncStorage working! Data saved and retrieved.');
+        Alert.alert(
+          'Success',
+          'AsyncStorage working! Data saved and retrieved.'
+        );
       } else {
         Alert.alert('Error', 'AsyncStorage test failed');
       }
-      
+
       // Clean up
       await AsyncStorage.removeItem(testKey);
     } catch (error) {
-      Alert.alert('Error', 'AsyncStorage failed: ' + error);
+      Alert.alert('Error', 'AsyncStorage failed: ' + String(error));
     }
   };
 
@@ -48,15 +50,15 @@ export default function DependencyTest() {
     <View style={styles.container}>
       <Text style={styles.title}>PocketTherapy Dependencies Test</Text>
       <Text style={styles.subtitle}>Testing core packages installation</Text>
-      
+
       <TouchableOpacity style={styles.button} onPress={testHaptics}>
         <Text style={styles.buttonText}>Test Haptics (Vibration)</Text>
       </TouchableOpacity>
-      
+
       <TouchableOpacity style={styles.button} onPress={testAsyncStorage}>
         <Text style={styles.buttonText}>Test AsyncStorage (Local Data)</Text>
       </TouchableOpacity>
-      
+
       <View style={styles.statusContainer}>
         <Text style={styles.statusTitle}>Installed Dependencies:</Text>
         <Text style={styles.statusItem}>✅ React Navigation</Text>
