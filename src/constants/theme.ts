@@ -120,7 +120,8 @@ export const theme = {
     sectionSpacing: Spacing.xl,
   },
 
-  // Elevation system (for shadows and z-index)
+  // Elevation system (for shadows and z-index) - DEPRECATED
+  // Use shadowPresets from utils/shadowUtils.ts instead
   elevation: {
     none: {
       shadowColor: 'transparent',

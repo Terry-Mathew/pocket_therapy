@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import { therapeuticColors, spacing, typography } from '../../constants/theme';
 // import { triggerHaptic } from '../../utils'; // Commented out for now
+import { getElevationStyle } from '../../utils/shadowUtils';
 import type { CardProps } from '../../types';
 
 const Card: React.FC<CardProps> = ({
@@ -41,11 +42,7 @@ const Card: React.FC<CardProps> = ({
       padding: spacing['5x'], // 20px
       borderWidth: 1,
       borderColor: therapeuticColors.border,
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: elevated ? 0.1 : 0.05,
-      shadowRadius: elevated ? 4 : 2,
-      elevation: elevated ? 3 : 1,
+      ...getElevationStyle(elevated ? 'medium' : 'small'),
     };
   };
 

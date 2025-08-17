@@ -15,27 +15,40 @@ const isDevelopment = __DEV__;
 // Supabase configuration
 const SUPABASE_CONFIG = {
   development: {
-    url: process.env.EXPO_PUBLIC_SUPABASE_DEV_URL || '',
-    anonKey: process.env.EXPO_PUBLIC_SUPABASE_DEV_ANON_KEY || '',
+    url: process.env.EXPO_PUBLIC_SUPABASE_URL || '',
+    anonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '',
   },
   production: {
-    url: process.env.EXPO_PUBLIC_SUPABASE_PROD_URL || '',
-    anonKey: process.env.EXPO_PUBLIC_SUPABASE_PROD_ANON_KEY || '',
+    url: process.env.EXPO_PUBLIC_SUPABASE_URL || '',
+    anonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '',
   },
 };
 
-// Get current environment config
-const currentConfig = isDevelopment 
-  ? SUPABASE_CONFIG.development 
+// Get current environment config with fallback for development
+let currentConfig = isDevelopment
+  ? SUPABASE_CONFIG.development
   : SUPABASE_CONFIG.production;
 
-// Validate configuration
+// Validate configuration - use demo values if missing for development
 if (!currentConfig.url || !currentConfig.anonKey) {
   const env = isDevelopment ? 'development' : 'production';
-  throw new Error(
-    `Missing Supabase configuration for ${env} environment. ` +
-    `Please check your environment variables.`
-  );
+
+  if (isDevelopment) {
+    console.warn(
+      `⚠️ Missing Supabase configuration for ${env} environment. ` +
+      `Using demo values. Please check your .env file for production use.`
+    );
+    // Use demo values for development
+    currentConfig = {
+      url: 'https://demo.supabase.co',
+      anonKey: 'demo_anon_key'
+    };
+  } else {
+    throw new Error(
+      `Missing Supabase configuration for ${env} environment. ` +
+      `Please check your environment variables.`
+    );
+  }
 }
 
 // Create Supabase client with custom configuration
