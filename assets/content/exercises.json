@@ -1,0 +1,323 @@
+[
+{
+"id": "ex-breath-478-1",
+"title": "4-7-8 Breathing (Quick)",
+"type": "breathing",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Sit comfortably. If safe, close your eyes." },
+{ "type": "breath", "content": "Inhale", "seconds": 4 },
+{ "type": "breath", "content": "Hold", "seconds": 7 },
+{ "type": "breath", "content": "Exhale", "seconds": 8 },
+{ "type": "pause", "content": "Repeat this cycle 3 times." }
+]
+},
+{
+"id": "ex-breath-box-1",
+"title": "Box Breathing 4-4-4-4",
+"type": "breathing",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "breath", "content": "Inhale", "seconds": 4 },
+{ "type": "breath", "content": "Hold", "seconds": 4 },
+{ "type": "breath", "content": "Exhale", "seconds": 4 },
+{ "type": "breath", "content": "Hold", "seconds": 4 },
+{ "type": "pause", "content": "Repeat for 4 cycles." }
+]
+},
+{
+"id": "ex-breath-pace-1",
+"title": "Paced Breathing 5-5",
+"type": "breathing",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "breath", "content": "Inhale", "seconds": 5 },
+{ "type": "breath", "content": "Exhale", "seconds": 5 },
+{ "type": "pause", "content": "Repeat for 6 cycles." }
+]
+},
+{
+"id": "ex-breath-coh-1",
+"title": "Coherent Breathing 6-6",
+"type": "breathing",
+"duration_minutes": 3,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "breath", "content": "Inhale", "seconds": 6 },
+{ "type": "breath", "content": "Exhale", "seconds": 6 },
+{ "type": "pause", "content": "Repeat for 5 cycles." }
+]
+},
+{
+"id": "ex-breath-phys-sigh-1",
+"title": "Physiological Sigh",
+"type": "breathing",
+"duration_minutes": 1,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Two small inhales through nose, one long exhale through mouth." },
+{ "type": "pause", "content": "Repeat 5 times at a calm pace." }
+]
+},
+{
+"id": "ex-breath-extended-exhale-1",
+"title": "Gentle Extended Exhale 4-6",
+"type": "breathing",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Inhale softly for 4 seconds, exhale for 6 seconds." },
+{ "type": "pause", "content": "Repeat for 8 cycles." }
+]
+},
+{
+"id": "ex-breath-ladder-1",
+"title": "Breath Ladder 3→5",
+"type": "breathing",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Inhale 3s / Exhale 3s → 4/4 → 5/5." }
+]
+},
+{
+"id": "ex-breath-478-2",
+"title": "4-7-8 Breathing (Longer)",
+"type": "breathing",
+"duration_minutes": 3,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "breath", "content": "Inhale", "seconds": 4 },
+{ "type": "breath", "content": "Hold", "seconds": 7 },
+{ "type": "breath", "content": "Exhale", "seconds": 8 },
+{ "type": "pause", "content": "Repeat 4–5 cycles." }
+]
+},
+{
+"id": "ex-breath-nasal-1",
+"title": "Nasal Breathing Reset",
+"type": "breathing",
+"duration_minutes": 1,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Inhale and exhale quietly through nose; keep shoulders soft; 10 calm breaths." }
+]
+},
+{
+"id": "ex-breath-countdown-1",
+"title": "Breath Countdown 5→1",
+"type": "breathing",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Inhale/exhale 5s → then 4s → 3s → 2s → 1s." }
+]
+},
+{
+"id": "ex-ground-54321-1",
+"title": "5–4–3–2–1 Grounding",
+"type": "grounding",
+"duration_minutes": 3,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Name 5 things you can see." },
+{ "type": "text", "content": "Name 4 things you can feel." },
+{ "type": "text", "content": "Name 3 things you can hear." },
+{ "type": "text", "content": "Name 2 things you can smell." },
+{ "type": "text", "content": "Name 1 thing you can taste or are grateful for." }
+]
+},
+{
+"id": "ex-ground-name-objects-1",
+"title": "Label 3 Neutral Objects",
+"type": "grounding",
+"duration_minutes": 1,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Name 3 neutral objects near you and their colors." }]
+},
+{
+"id": "ex-ground-texture-1",
+"title": "Texture Focus",
+"type": "grounding",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Touch a nearby object and describe its texture, temperature, weight, edges." }]
+},
+{
+"id": "ex-ground-hand-scan-1",
+"title": "Hand Scan",
+"type": "grounding",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Place one hand on chest, one on belly; notice rise/fall and temperature." }
+]
+},
+{
+"id": "ex-ground-roomtone-1",
+"title": "Room Tone Focus",
+"type": "grounding",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Notice distant, medium, and near sounds without judging." }]
+},
+{
+"id": "ex-ground-color-hunt-1",
+"title": "Color Hunt",
+"type": "grounding",
+"duration_minutes": 1,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Find 3 blue things around you. Name them." }]
+},
+{
+"id": "ex-ground-steps-1",
+"title": "Micro-Movement Reset",
+"type": "grounding",
+"duration_minutes": 1,
+"flags": { "sos_safe": true, "night_safe": false, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Stand if safe, roll shoulders, unclench jaw, soften forehead." }]
+},
+{
+"id": "ex-ground-temp-1",
+"title": "Temperature Reset",
+"type": "grounding",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": false, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Hold a cool glass or splash cool water; focus on sensation." }]
+},
+{
+"id": "ex-ground-anchoring-1",
+"title": "Anchor Phrase",
+"type": "grounding",
+"duration_minutes": 1,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Repeat: 'I am safe enough in this moment. I can breathe and proceed slowly.'" }]
+},
+{
+"id": "ex-ground-walk-1",
+"title": "Grounded Steps (Seated or Standing)",
+"type": "grounding",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": false, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Notice feet contact: heel, arch, toes. If seated, press feet gently into floor." }]
+},
+{
+"id": "ex-cogn-evidence-1",
+"title": "Evidence For / Against",
+"type": "cognitive",
+"duration_minutes": 3,
+"flags": { "sos_safe": false, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Write the worrying thought." },
+{ "type": "text", "content": "What evidence supports it?" },
+{ "type": "text", "content": "What evidence challenges it?" }
+]
+},
+{
+"id": "ex-cogn-reframe-1",
+"title": "Reframe the Thought",
+"type": "cognitive",
+"duration_minutes": 2,
+"flags": { "sos_safe": false, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Original thought: write it down." },
+{ "type": "text", "content": "A balanced thought that includes both concerns and possibilities." }
+]
+},
+{
+"id": "ex-cogn-decat-1",
+"title": "De-Catastrophize",
+"type": "cognitive",
+"duration_minutes": 3,
+"flags": { "sos_safe": false, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Worst that could realistically happen?" },
+{ "type": "text", "content": "Most likely outcome?" },
+{ "type": "text", "content": "If worst happened, how would you cope?" }
+]
+},
+{
+"id": "ex-cogn-kindfriend-1",
+"title": "Kind Friend Reframe",
+"type": "cognitive",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [{ "type": "text", "content": "Imagine a kind friend speaking to you. Write what they would say." }]
+},
+{
+"id": "ex-cogn-problem-slice-1",
+"title": "Slice the Problem",
+"type": "cognitive",
+"duration_minutes": 3,
+"flags": { "sos_safe": false, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Write the big worry." },
+{ "type": "text", "content": "What is one slice you can do in 5 minutes?" },
+{ "type": "text", "content": "Set a tiny next step." }
+]
+},
+{
+"id": "ex-cogn-facts-fears-1",
+"title": "Facts vs. Fears",
+"type": "cognitive",
+"duration_minutes": 3,
+"flags": { "sos_safe": false, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "List 3 facts about the situation." },
+{ "type": "text", "content": "List 3 fears. Which are guesses?" }
+]
+},
+{
+"id": "ex-cogn-cost-benefit-1",
+"title": "Cost–Benefit Thought",
+"type": "cognitive",
+"duration_minutes": 3,
+"flags": { "sos_safe": false, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "If I follow this thought, what are the costs?" },
+{ "type": "text", "content": "If I let it pass and act on my values, what are the benefits?" }
+]
+},
+{
+"id": "ex-cogn-values-1",
+"title": "Values Prompt",
+"type": "cognitive",
+"duration_minutes": 3,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Name one value you care about today (e.g., learning, kindness)." },
+{ "type": "text", "content": "One tiny action that honors it." }
+]
+},
+{
+"id": "ex-cogn-thought-log-1",
+"title": "Mini Thought Log",
+"type": "cognitive",
+"duration_minutes": 3,
+"flags": { "sos_safe": false, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "Situation → Thought → Feeling (0–100) → Balanced thought." }
+]
+},
+{
+"id": "ex-cogn-if-then-1",
+"title": "If–Then Plan",
+"type": "cognitive",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [
+{ "type": "text", "content": "If I feel anxious before X, then I will do Y (a 60s breathing or grounding)." }
+]
+},
+{
+"id": "ex-cogn-self-comp-1",
+"title": "Self-Compassion Script",
+"type": "cognitive",
+"duration_minutes": 2,
+"flags": { "sos_safe": true, "night_safe": true, "offline_ready": true },
+"steps": [{ "type": "text", "content": "This is tough. Others feel this too. I can be kind to myself right now." }]
+}
+]

@@ -1,0 +1,465 @@
+[
+  {
+    "id": "TC001",
+    "title": "Mood Tracking Normal Flow",
+    "description": "Verify that a user can select a mood from the 5-emoji scale, add optional triggers and notes, and submit the check-in successfully.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Mood Check-in screen"
+      },
+      {
+        "type": "action",
+        "description": "Select an emoji mood from the 5-level scale"
+      },
+      {
+        "type": "action",
+        "description": "Add one or more optional trigger tags"
+      },
+      {
+        "type": "action",
+        "description": "Input a note about the mood"
+      },
+      {
+        "type": "action",
+        "description": "Submit the mood check-in"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the mood, triggers, and notes are saved correctly and visible in mood history"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Mood Tracking Crisis Keyword Detection",
+    "description": "Verify that entering mood triggers or notes containing crisis keywords triggers immediate crisis overlay with appropriate options.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Mood Check-in screen"
+      },
+      {
+        "type": "action",
+        "description": "Select any emoji mood"
+      },
+      {
+        "type": "action",
+        "description": "Add a note containing a known crisis keyword"
+      },
+      {
+        "type": "action",
+        "description": "Submit the check-in"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that a crisis support overlay or modal dialog appears immediately"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that user can access SOS breathing exercises and emergency contacts from the overlay"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Personalized Exercise Recommendation Delivery Within 5 Seconds",
+    "description": "Verify that after mood check-in, AI-powered personalized CBT exercises are recommended within 5 seconds, including fallback options when AI fails.",
+    "category": "performance",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Complete a mood check-in selecting mood and trigger tags"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that a personalized exercise recommendation is displayed within 5 seconds"
+      },
+      {
+        "type": "assertion",
+        "description": "Simulate AI service failure and verify fallback exercise recommendations are shown"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Exercise Session Playback and Completion Tracking",
+    "description": "Verify that users can browse exercises, start audio-visual guided sessions with haptic feedback, pause/resume, and complete exercises with rating submission.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Exercise Library"
+      },
+      {
+        "type": "action",
+        "description": "Select a breathing or cognitive exercise"
+      },
+      {
+        "type": "action",
+        "description": "Start exercise session and verify audio, visual, and haptic guidance activate"
+      },
+      {
+        "type": "action",
+        "description": "Pause and resume the exercise session"
+      },
+      {
+        "type": "action",
+        "description": "Complete the exercise session"
+      },
+      {
+        "type": "action",
+        "description": "Provide a rating for the exercise"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the completion status and rating are saved and reflected in user profile/analytics"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "SOS Crisis Support Activation",
+    "description": "Verify that the SOS floating button is accessible globally, and on tap instantly activates calming exercises and emergency contact options without UI delays.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "From any screen, tap the floating SOS crisis button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify immediate display of crisis support screen with breathing exercises and emergency resources"
+      },
+      {
+        "type": "action",
+        "description": "Tap emergency contact options and verify correct local/regional contacts are shown"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no alert sounds or intrusive notifications are triggered"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Offline Mode Mood Tracking and Exercise Playback",
+    "description": "Verify that mood tracking and core exercises function correctly without internet connectivity, and data sync occurs on reconnection with conflict resolution.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Disable device internet connectivity"
+      },
+      {
+        "type": "action",
+        "description": "Perform a mood check-in with mood selection, triggers, and notes"
+      },
+      {
+        "type": "action",
+        "description": "Navigate and start offline-supported exercise session"
+      },
+      {
+        "type": "action",
+        "description": "Complete exercise session and rate it"
+      },
+      {
+        "type": "action",
+        "description": "Re-enable device internet connectivity"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that offline mood check-in and exercise data synchronize correctly to server with no data loss"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify local conflict resolution logic is executed if needed"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Authentication Flow with Google OAuth and Guest Mode",
+    "description": "Verify secure login using Google OAuth and guest mode login with correct data migration from guest to authenticated sessions.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch app and login via Google OAuth"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify successful authentication, session establishment, and data access"
+      },
+      {
+        "type": "action",
+        "description": "Logout and switch to guest mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify anonymous session with limited features enabled"
+      },
+      {
+        "type": "action",
+        "description": "Perform mood check-in and exercise completion under guest mode"
+      },
+      {
+        "type": "action",
+        "description": "Login again via Google OAuth"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify previous guest data migrates to authenticated account and is retained"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Notification Delivery and Contextual Therapeutic Messaging",
+    "description": "Verify notifications are sent as per user preferences with relevant therapeutic content and that smart nudges trigger correctly based on user engagement patterns.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Configure notification preferences in settings"
+      },
+      {
+        "type": "action",
+        "description": "Simulate scheduled notification time"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify receipt of push notification with correct therapeutic tone and content"
+      },
+      {
+        "type": "action",
+        "description": "Simulate missed check-ins or exercise sessions to trigger smart nudges"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify smart nudge notifications are sent with contextual suggestions"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Accessibility Compliance Verification",
+    "description": "Verify that all main screens meet WCAG 2.1 AA standards including screen reader labels, minimum touch targets, contrast ratios, and font scaling.",
+    "category": "accessibility",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Enable screen reader and navigate through the app screens"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all interactive elements have descriptive accessibility labels"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all buttons and touch targets meet minimum size requirements"
+      },
+      {
+        "type": "action",
+        "description": "Adjust system font size to large settings"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify UI adapts correctly without truncation or layout breakage"
+      },
+      {
+        "type": "action",
+        "description": "Check color contrast on all screens using automated tools"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify contrast meets WCAG AA thresholds"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Insights & Analytics Accuracy for Mood Trends",
+    "description": "Verify the insights screen accurately reflects trends, pattern analysis and personalized therapeutic insights based on user mood and exercise data.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Complete multiple mood check-ins and exercises over several days"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the Insights screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify mood trend graphs and analytics match recorded mood data"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify personalized therapeutic insights update according to recent data"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Settings Privacy and Data Management Controls",
+    "description": "Verify users can configure notification, privacy, audio, and accessibility settings and can export or delete their data securely per regulations.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open Settings screen"
+      },
+      {
+        "type": "action",
+        "description": "Modify notification schedules and privacy options"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify changes are saved and respected on app behavior"
+      },
+      {
+        "type": "action",
+        "description": "Request data export and verify export file is generated with correct user data"
+      },
+      {
+        "type": "action",
+        "description": "Perform data deletion request"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user data is removed from local storage and server with confirmation"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Navigation and UI Consistency with Design System",
+    "description": "Verify tab-based navigation works smoothly including crisis-first modal screens and that all UI components use the therapeutic color palette, typography, spacing, and animation standards.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate between tabs: Home, Exercises, Insights, Settings"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify transitions are smooth with no freezes or glitches"
+      },
+      {
+        "type": "action",
+        "description": "Trigger crisis modal from mood check or SOS button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify crisis modal disables background interaction and uses recommended UI colors and typography"
+      },
+      {
+        "type": "action",
+        "description": "Inspect UI elements on multiple screens for color palette, font styles, spacing, and animations compliance"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all UI components follow the app's design system and accessibility standards"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Data Access Security and Anonymized Analytics",
+    "description": "Verify that all user data access is restricted to authenticated users only with row-level security and that analytics data aggregated is anonymized.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Attempt to access mood data of a different user with manual API requests"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify access is denied with appropriate error code"
+      },
+      {
+        "type": "action",
+        "description": "Login as a valid user and query user-specific analytics data"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify data returned corresponds only to logged-in user"
+      },
+      {
+        "type": "action",
+        "description": "Access aggregated analytics for anonymized trends"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no personally identifiable information is exposed"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Performance Under Load and Low-end Devices",
+    "description": "Verify app performance, memory usage, and responsiveness under load on low-end devices, including device detection and performance optimizations.",
+    "category": "performance",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Run the app on a low-end device or emulator with limited memory and CPU"
+      },
+      {
+        "type": "action",
+        "description": "Perform typical user flows including mood check-in, exercise session, and navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify app maintains acceptable responsiveness and does not crash"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify performance optimizations such as memory usage and device-specific tweaks are applied"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Exception and Error Handling for AI API Failures",
+    "description": "Verify that AI exercise recommendation API failures are gracefully handled with fallback logic and appropriate user feedback without disrupting app flow.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate AI API failure or timeout during personalized exercise recommendation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify app falls back to predefined exercise recommendations promptly"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user receives non-technical, clear feedback about recommendation availability"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no unhandled exceptions or crashes occur"
+      }
+    ]
+  }
+]

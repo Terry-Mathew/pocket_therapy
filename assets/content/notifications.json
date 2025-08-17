@@ -1,0 +1,17 @@
+[
+{ "id": "checkin_morning_1", "text": "One calm minute?", "context": ["morning"] },
+{ "id": "checkin_morning_2", "text": "How are you feeling today? A quick check-in can help.", "context": ["morning"] },
+{ "id": "checkin_evening_1", "text": "Wind down with a gentle 2-minute breath?", "context": ["evening"] },
+{ "id": "checkin_evening_2", "text": "You did enough today. Ready for a soft landing?", "context": ["evening"] },
+{ "id": "nudge_peak_1", "text": "This time can feel intense. A 60s reset?", "context": ["afternoon"] },
+{ "id": "sos_followup_1", "text": "Checking in—want a gentle grounding for 1 minute?", "context": ["sos_followup"] },
+{ "id": "streak_gentle_1", "text": "Tiny steps count. Your calm practice is growing.", "context": ["motivation"] },
+{ "id": "streak_restart_1", "text": "No worries about streaks—want to start fresh today?", "context": ["motivation"] },
+{ "id": "sleep_winddown_1", "text": "A soft breath before bed?", "context": ["night"] },
+{ "id": "study_focus_1", "text": "Before study, a 90s breath to settle?", "context": ["study"] },
+{ "id": "exam_day_1", "text": "You've prepared. A short grounding can help right now.", "context": ["exam"] },
+{ "id": "money_stress_1", "text": "Money thoughts are heavy—try a 60s exhale.", "context": ["finance"] },
+{ "id": "social_anxiety_1", "text": "Heading out? One calm minute can steady you.", "context": ["social"] },
+{ "id": "win_reflect_1", "text": "You showed up today. Want to mark this tiny win?", "context": ["reflection"] },
+{ "id": "return_prompt_1", "text": "We're here when you need. A gentle reset?", "context": ["return"] }
+]

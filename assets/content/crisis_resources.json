@@ -1,0 +1,22 @@
+{
+"regions": [
+{
+"country": "IN",
+"city": "Bengaluru",
+"resources": [
+{ "name": "Vandrevala Foundation Helpline", "phone": "1860 2662 345", "hours": "24x7", "notes": "Mental health support across India" },
+{ "name": "Aasra Helpline", "phone": "91-9820466726", "hours": "24x7", "notes": "Suicide prevention" }
+],
+"disclaimer": "This app is self-help, not a medical service. If you are in immediate danger, call local emergency services."
+},
+{
+"country": "US",
+"city": "National",
+"resources": [
+{ "name": "988 Suicide & Crisis Lifeline", "phone": "988", "hours": "24x7", "notes": "Call or text 988" },
+{ "name": "Crisis Text Line", "phone": "Text HOME to 741741", "hours": "24x7", "notes": "Confidential text support" }
+],
+"disclaimer": "This app is self-help, not a medical service. If you are in immediate danger, call 911."
+}
+]
+}
