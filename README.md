@@ -71,17 +71,29 @@ npx expo start
 ### Project Structure
 ```
 pocket_therapy/
-├── assets/                 # App assets (icons, images)
-├── src/                   # Source code (in PocketTherapy/)
+├── assets/                 # App assets (icons, images, content)
+├── docs/                  # Comprehensive documentation (37 files)
+├── src/                   # Source code (113+ files)
 │   ├── components/        # Reusable UI components
-│   ├── screens/          # App screens
-│   ├── services/         # API and business logic
+│   ├── screens/          # App screens & onboarding
+│   ├── services/         # API, AI, storage, and business logic
 │   ├── navigation/       # Navigation configuration
-│   ├── store/           # State management
-│   └── utils/           # Helper functions
+│   ├── store/           # State management (Zustand)
+│   ├── hooks/           # Custom React hooks
+│   ├── utils/           # Helper functions
+│   ├── types/           # TypeScript definitions
+│   ├── data/            # Static data and resources
+│   ├── context/         # React contexts
+│   ├── constants/       # App constants and theme
+│   └── __tests__/       # Comprehensive test suite
+├── testsprite_tests/      # 15 TestSprite test cases
+├── test-*.js             # Debugging and verification scripts
 ├── App.tsx              # Main app component
 ├── app.json            # Expo configuration
-└── package.json        # Dependencies
+├── package.json        # Dependencies
+├── jest.config.js      # Jest testing configuration
+├── playwright.config.ts # E2E testing configuration
+└── README.md           # This documentation
 ```
 
 ### Available Scripts
@@ -126,12 +138,16 @@ SUPABASE_ANON_KEY=your_supabase_anon_key
 - **Missing Assets**: Resolved asset directory issues
 - **Dependency Conflicts**: Cleaned up problematic packages
 - **Bundling Errors**: Simplified configurations for stability
+- **Project Organization**: Consolidated all files into clean single structure
+- **Navigation Dependencies**: Fixed React Navigation v6 compatibility
 
 ### Build Status
 - ✅ **Stable Build Achieved**
 - ✅ **No Syntax Errors**
 - ✅ **Compatible Dependencies**
 - ✅ **Clean Bundle Process**
+- ✅ **Organized File Structure**
+- ✅ **All Fixes Reflected**
 
 ## 🤝 Contributing
 
